@@ -2,12 +2,6 @@
 
 Upload a messy CSV or Excel file, answer a few questions, and download a clean file that loads straight into Power BI. Built with **Python, pandas, NumPy, Seaborn/Matplotlib** and **Streamlit**.
 
-
-
-![Issues found](docs/screenshots/02_issues.png)
-
-
-
 ## What it does
 - Profiles the file, finds duplicates, missing values, wrong data types, messy text, category variants, outliers and invalid values
 - Fixes safe things automatically (spaces, casing, types) and logs every change
@@ -45,8 +39,6 @@ Safe fixes run automatically and are logged. Anything that removes rows or colum
 pip install -r requirements.txt
 streamlit run app.py
 ```
-Try `sample_data/messy_sales.csv`, with `customer_segments.csv` as the second table (join on "Customer ID" / "customer id"). Regenerate samples with `python make_sample_data.py`.
-
 ## Known limits
 - Dates like 03/04/2024 are ambiguous, so there is a day-first / month-first setting
 - Fuzzy category matching is deliberately conservative; add your own labels to KNOWN_ALIASES
